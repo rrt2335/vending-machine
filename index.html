@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css"
+        integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Vending Machine</title>
+</head>
+
+<body class="container">
+    <section id="cards" class="row">
+        <div class="col-12">
+            <h1>Vending Machine</h1>
+        </div>
+        <div class="col-6">
+            <img src="https://target.scene7.com/is/image/Target/GUEST_3d2a8073-36e6-4cec-8c8c-872639105820?wid=488&hei=488&fmt=pjpeg">
+            <button onclick="app.controllers.vendrController.buySnack('a1')">A1</button>
+            <img src="https://www.fritolay.com/images/default-source/blue-bag-image/lays-classic.png?sfvrsn=bd1e563a_2">
+            <button onclick="app.controllers.vendrController.buySnack('a2')">A2</button>
+            <img src="https://i5.wal.co/asr/1cfb840a-d3ae-476e-8231-f325f613ef55_2.92a65f9be376cd0207f1bcbd76f57b32.png-0de6bda931102c30afd33a74e6f81f94fe8bcf73-crushed-450x450.png">
+            <button onclick="app.controllers.vendrController.buySnack('a3')">A3</button><br>
+            <img src="https://images-na.ssl-images-amazon.com/images/I/612RVzTTy0L._SY355_.jpg">
+            <button onclick="app.controllers.vendrController.buySnack('b1')">B1</button>
+            <img src="https://jlbrooks.co.uk/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/2/4/240px-twix-wrapper-small.jpg">
+            <button onclick="app.controllers.vendrController.buySnack('b2')">B2</button>
+            <img src="https://www.doritos.com/sites/doritos.com/files/styles/product_thumbnail/public/2018-08/new-nacho-cheese.png?itok=DBzG_5v6">
+            <button onclick="app.controllers.vendrController.buySnack('b3')">B3</button><br>
+        </div>
+        <div class="col-6">
+            <h2>$<span id="bal">_</span></h2>
+            <button onclick="app.controllers.vendrController.addQuarter()">Add quarter</button>
+            <button onclick="app.controllers.vendrController.returnCoins()">Coin return</button>
+        </div>
+    </section>
+
+
+    <script type="module" src="app/main.js"></script>
+
+</body>
+
+</html>
