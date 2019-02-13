@@ -11,24 +11,28 @@
     <title>Vending Machine</title>
 </head>
 
-<body class="container">
-    <section id="cards" class="row">
-        <div class="col-12">
-            <h1>VENDING MACHINE</h1>
+<body>
+    <section class="container-fluid">
+        <div id="cards" class="row">
+            <div class="col-12">
+                <h1>VENDING MACHINE</h1>
+            </div>
         </div>
-        <div class="col-6">
-            <button onclick="app.controllers.vendrController.buySnack('a1')">A1</button>
-            <button onclick="app.controllers.vendrController.buySnack('a2')">A2</button>
-            <button onclick="app.controllers.vendrController.buySnack('a3')">A3</button><br>
-            <button onclick="app.controllers.vendrController.buySnack('b1')">B1</button>
-            <button onclick="app.controllers.vendrController.buySnack('b2')">B2</button>
-            <button onclick="app.controllers.vendrController.buySnack('b3')">B3</button><br>
-        </div>
-        <div class="col-6">
-            <h2>$<span id="bal">_</span></h2>
-            <button onclick="app.controllers.vendrController.addQuarter()">Add a quarter</button>
-            <button onclick="app.controllers.vendrController.addDollar()">Add a dollar</button>
-            <button onclick="app.controllers.vendrController.returnCoins()">Coin return</button>
+        <div class="row">
+            <div class="col-6">
+                <button onclick="app.controllers.vendrController.buySnack('a1')">A1</button>
+                <button onclick="app.controllers.vendrController.buySnack('a2')">A2</button>
+                <button onclick="app.controllers.vendrController.buySnack('a3')">A3</button><br>
+                <button onclick="app.controllers.vendrController.buySnack('b1')">B1</button>
+                <button onclick="app.controllers.vendrController.buySnack('b2')">B2</button>
+                <button onclick="app.controllers.vendrController.buySnack('b3')">B3</button><br>
+            </div>
+            <div class="col-6">
+                <h2>$<span id="bal">_</span></h2>
+                <button onclick="app.controllers.vendrController.addQuarter()">Add a quarter</button>
+                <button onclick="app.controllers.vendrController.addDollar()">Add a dollar</button>
+                <button onclick="app.controllers.vendrController.returnCoins()">Coin return</button>
+            </div>
         </div>
     </section>
 
