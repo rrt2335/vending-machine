@@ -18,23 +18,31 @@ export default class VendrService {
         if (_vm.balance < 10) { // The machine can only accept a maximum of $10.
             _vm.balance += .25;
         } else {
-            alert("The machine cannot accept any more money.")
+            alert("The machine can only accept a maximum of $10.00.")
+        }
+    }
+    addDollar() {
+        if (_vm.balance < 10) { // The machine can only accept a maximum of $10.
+            _vm.balance++;
+        } else {
+            alert("The machine can only accept a maximum of $10.00.")
         }
     }
     returnCoins() {
         if (_vm.balance > 0) {
             _vm.balance = 0;
         } else {
-            alert("There are no coins to be returned.")
+            alert("There is no money to be returned.")
         }
     }
     buySnack(vendNumber) {
-        let snack = _vm.snacks[vendNumber]
+        let snack = _vm.snacks[vendNumber];
         if (_vm.balance >= snack.price) {
             _vm.balance -= snack.price;
             alert(`Enjoy your ${snack.name}!`);
         } else {
-            alert(`There is not enough money inserted to purchase this snack. It costs $${snack.price.toFixed(2)}, so you need $${snack.price - _vm.balance} more.`);
+            let difference = snack.price - _vm.balance;
+            alert(`There is not enough money inserted to purchase this snack. It costs $${snack.price.toFixed(2)}, so you need $${difference.toFixed(2)} more.`);
         }
     }
 }

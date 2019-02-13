@@ -18,6 +18,10 @@ export default class VendrController {
         vendrService.addQuarter();
         draw();
     }
+    addDollar() {
+        vendrService.addDollar();
+        draw();
+    }
     returnCoins() {
         vendrService.returnCoins();
         draw();
